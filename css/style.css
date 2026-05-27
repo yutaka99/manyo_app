@@ -1,0 +1,117 @@
+/* ==========================================================================
+   屋外特化型高コントラストスタイルシート (style.css)
+   ========================================================================== */
+
+/* 1. 全体ベース設計 */
+body {
+    background-color: #000000; /* 太陽光の乱反射を抑える漆黒背景 */
+    color: #ffffff;            /* 視認性の基本となる純白文字 */
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 画面全体のコンテナ */
+.container {
+    max-width: 600px;          /* スマホで見やすい横幅に制限 */
+    margin: 0 auto;
+    padding: 24px 16px 100px 16px; /* 下部ナビとの被りを防ぐ十分な余白 */
+}
+
+/* 2. ホーム・メッセージエリア */
+.message-box {
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px dashed #ffd700; /* 黄金色の破線枠 */
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* 3. 植物解説コンテンツ要素 */
+.plant-name {
+    font-size: 2.2rem;         /* 歩きながらでも一目でわかる大文字 */
+    font-weight: bold;
+    color: #ffffff;
+    border-bottom: 3px solid #ffd700; /* 黄金のアクセントライン */
+    padding-bottom: 8px;
+    margin: 0 0 8px 0;
+}
+
+/* 万葉集の歌を囲むカード */
+.waka-section {
+    background-color: #111111; /* 視認性を損なわない極薄いグレー */
+    border-left: 5px solid #ffd700; /* 左側に黄金の縦線 */
+    padding: 20px;
+    margin: 24px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.waka-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffd700;            /* 万葉集の歌を黄金色で最強調 */
+    margin: 0 0 12px 0;
+    letter-spacing: 0.1rem;
+}
+
+.waka-yomi {
+    font-size: 1.1rem;
+    color: #aaaaaa;
+    margin: 0;
+}
+
+/* 小見出し */
+.section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffd700;            /* 見出しも黄金色に統一 */
+    margin: 24px 0 8px 0;
+}
+
+/* 解説本文テキスト */
+.text-block {
+    font-size: 1.2rem;
+    font-weight: 500;          /* 太めのウェイト(500)で光の滲みに負けない設計 */
+    margin: 0 0 20px 0;
+}
+
+/* 4. 固定フッターナビゲーション */
+.footer-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111111;
+    border-top: 1px solid #333333;
+    padding: 12px 0;
+    display: table;             /* 横並び用の堅牢なテーブルレイアウト */
+    table-layout: fixed;
+}
+
+/* 各ナビゲーションリンクの器 */
+.nav-item {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.nav-btn {
+    display: inline-block;
+    background-color: #222222;
+    color: #ffd700;
+    border: 1px solid #ffd700;
+    padding: 10px 0;
+    width: 85%;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: bold;
+    min-height: 44px;          /* スマホでタップしやすいよう44px以上の高さを確保 */
+}
+
+/* タップ（アクティブ）時の瞬間的な視覚フィードバック */
+.nav-btn:active {
+    background-color: #ffd700;
+    color: #000000;
+}
