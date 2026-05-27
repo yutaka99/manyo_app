@@ -14,8 +14,8 @@ function renderApp() {
             // 【新機能】ARカメラモードのテンプレート
             appContainer.innerHTML = `
                 <div class="message-box" style="border-style: solid;">
-                    <h2 style="color: #ffd700; margin-top: 0;">万葉のファインダー</h2>
-                    <p style="font-size: 1.0rem; margin-bottom: 15px;">カメラの向こうの植物を、万葉の視点で切り取ります。</p>
+                    <h2 style="color: #ffd700; margin-top: 0;">万葉の窓</h2>
+                    <p style="font-size: 1.0rem; margin-bottom: 15px;">QRコードを読み取って下さい。</p>
                     
                     <div style="position: relative; width: 100%; height: 280px; background: #222; border-radius: 8px; overflow: hidden; margin-bottom: 15px;">
                         <video id="camera-preview" autoplay playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
@@ -33,7 +33,7 @@ function renderApp() {
             appContainer.innerHTML = `
                 <div class="message-box">
                     <h2 style="color: #ffd700; margin-top: 0;">万葉の窓</h2>
-                    <p style="font-size: 1.2rem;">園内の木札にあるQRコードをスマートフォンで読み取ると、ここに解説が瞬時に表示されます。</p>
+                    <p style="font-size: 1.2rem;">園内の木札にあるQRコードをスマートフォンで読み取ると、ここに解説がに表示されます。</p>
                     <p style="font-size: 0.9rem; color: #888888;">（一度読み込めば、奥地の電波がない場所でも動きます）</p>
                 </div>
             `;
